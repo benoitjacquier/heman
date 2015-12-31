@@ -1,5 +1,9 @@
 #pragma once
 
+#if defined(_MSC_VER) && _MSC_VER<=1800
+#define inline __inline
+#endif
+
 // An "image" encapsulates three integers (width, height, number of bands)
 // and an array of (w * h * nbands) floats, in scanline order.  For simplicity
 // the API disallows struct definitions, so this is just an opaque handle.

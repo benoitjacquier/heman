@@ -21,6 +21,10 @@
 
 #include "noise.h"
 
+#if defined(_MSC_VER) && _MSC_VER<=1800
+	#define inline __inline
+#endif
+
 #define STRETCH_CONSTANT_2D (-0.211324865405187)  // (1 / sqrt(2 + 1) - 1 ) / 2;
 #define SQUISH_CONSTANT_2D (0.366025403784439)  // (sqrt(2 + 1) -1) / 2;
 #define STRETCH_CONSTANT_3D (-1.0 / 6.0)  // (1 / sqrt(3 + 1) - 1) / 3;
